@@ -1,5 +1,6 @@
 import { Button, Card } from "react-bootstrap"
 import { formatCurrency } from "../utilities/formatCurrency"
+import { useShoppingCard } from "../context/ShoppingCardContext"
 
 type ProductCardProps = {
     id:number,
@@ -9,6 +10,8 @@ type ProductCardProps = {
 }
 
 function ProductCard({id, name,  price, imgUrl}:ProductCardProps) {
+  const {getItemQuantity, increaseCartQuantity, removeFromCart} = useShoppingCard();
+  const quantity = getItemQuantity(id)
   return (
    <Card>
     <Card.Img 
@@ -21,9 +24,15 @@ function ProductCard({id, name,  price, imgUrl}:ProductCardProps) {
         <span className="fs-2">{name}</span>
         <span className="ms-2 text-muted">{formatCurrency(price)}</span>
         </Card.Title>
+       {quantity === 0 ?
+         <div className="mt-auto">
+         <Button className="w-100" onClick={()=> increaseCartQuantity(id) }>Add to cart</Button>
+       </div> :
         <div className="mt-auto">
-          <Button className="w-100">Add to Cart</Button>
-        </div>
+        <Button className="w-100" onClick={()=> removeFromCart(id) }>Remove from cart</Button>
+      </div>
+       }
+      
     </Card.Body>
    </Card>
   )
