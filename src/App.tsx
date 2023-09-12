@@ -14,15 +14,14 @@ function App() {
   return (
     <ShoppingCardProvider>
     <Nav/>
-    <Container className='mb-4'>
+    <div >
       <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/about' element={<About/>}/>
       <Route path='/products' element={<Products/>}/>
       <Route path='/products/:id' element={<SingleProduct/>}/>
       <Route path='/cart' element={<Cart/>}/>
       </Routes>
-    </Container>
+    </div>
     </ShoppingCardProvider>
   )
 }

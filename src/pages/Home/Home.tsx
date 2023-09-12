@@ -8,7 +8,6 @@ import "./home.css"
 
 function Home() {
   return (
-
     <main className="home-main">
       <div className="photo-main">
         <div className="box-container">

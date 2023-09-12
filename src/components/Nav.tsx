@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar as NavbarBs, Button } from "react-bootstrap";
+import { Container, Navbar as NavbarBs, Button, Card } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useShoppingCard } from "../context/ShoppingCardContext";
 import "./nav.css"
@@ -8,11 +8,12 @@ function Nav() {
   const navigate = useNavigate();
   const {cartQuantity} = useShoppingCard()
   return (
-    <NavbarBs className="bg-white shadow-sm mb-3">
+    <NavbarBs className="bg-white shadow-sm mb-0">
       <Container className="nav-links">
-        <Link to={"/"}>Home</Link>
-        <Link to={"/about"}>About</Link>
+       <Card className="w-100 me-auto d-flex flex-row gap-4 border-0">
+       <Link to={"/"}>Home</Link>
         <Link to={"/products"}>Products</Link>
+       </Card>
         <Button
           style={{ width: "3rem", height: "3rem", position: "relative" }}
           variant="outline-primary"

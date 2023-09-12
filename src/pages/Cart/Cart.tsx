@@ -1,21 +1,22 @@
 import React from 'react'
-import { Card, Stack } from 'react-bootstrap'
+import { Card, Container, Stack } from 'react-bootstrap'
 import { useShoppingCard } from '../../context/ShoppingCardContext'
 import CartItem from '../../components/CartItem'
 import { formatCurrency } from '../../utilities/formatCurrency'
 import storeItems from '../../data/items.json'
+import './cart.css'
 
 
 function Cart() {
     const {cartItems} = useShoppingCard()
   return (
- <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}}>
-     <Card className='w-50 h-100 d-flex justify-content-center'>
+ <Container className='p-3' style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}}>
+     <Card className='card-container'>
     <Card.Header className='d-flex justify-content-center' >
         Cart
     </Card.Header>
     <Card.Body>
-        <Stack gap={3}>
+        <Stack gap={3} style={{width:"100%"}}>
             {cartItems.map(item => {
                 return( <CartItem key={item.id} {...item}/>)
             })}
@@ -31,7 +32,7 @@ function Cart() {
         </Stack>
     </Card.Body>
   </Card>
- </div>
+ </Container>
   )
 }
 
