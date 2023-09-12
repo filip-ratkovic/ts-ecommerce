@@ -1,0 +1,324 @@
+.home-main {
+    width: 100%;
+    display: flex;
+}
+.photo-main {
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.box-container {
+    position: absolute;
+    top: -50px;
+    left: -100px;
+}
+
+
+.box {
+    position: relative;
+    margin: 1em auto;
+    width: 20em;
+    height: 34.64em;
+    border-radius: 4em/1.6em;
+    background: #f4d769;
+    animation: rotates 11s infinite;
+    z-index: 1;
+}
+
+.box:before,
+.box:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: '';
+    z-index: 1;
+}
+
+.box:before {
+    -webkit-transform: rotate(80deg);
+    transform: rotate(60deg);
+}
+
+.box:after {
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+@keyframes rotates {
+    0% {
+        transform: rotate(0deg);
+        background-color: #f4d769;
+    }
+
+    10% {
+        transform: rotate(0deg);
+        background-color: #f4d769;
+    }
+
+   
+
+    40% {
+        transform: rotate(120deg);
+        background-color: #12aec2;
+
+    }
+
+    50% {
+        transform: rotate(120deg);
+        background-color: #12aec2;
+    }
+
+
+
+    70% {
+        transform: rotate(240deg);
+        background-color: #a466f2;
+    }
+
+    80% {
+        transform: rotate(240deg);
+        background-color: #a466f2;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        background-color: #f4d769;
+    }
+}
+
+.home-image-conteiner {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: -160px;
+    background-color: transparent;
+    z-index: 1;
+    animation: rotateImgCont 11s infinite;
+}
+
+.image {
+    position: absolute;
+}
+
+.one {
+    width: 400px;
+    top: -100px;
+    left: -90px;
+    animation:
+        desapireOne 11s infinite,
+        rotateImg 11s infinite;
+}
+
+.two {
+    width: 300px;
+    top: 140px;
+    right: -190px;
+    animation:
+        desapireTwo 11s infinite,
+        rotateImg 11s infinite;
+}
+
+.three {
+    width: 280px;
+    bottom: -30px;
+    left: -100px;
+    animation:
+        desapireThree 11s infinite,
+        rotateImg 11s infinite;
+}
+
+@keyframes rotateImgCont {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(0deg);
+    }
+
+   
+
+    40% {
+        transform: rotate(120deg);
+
+    }
+
+    50% {
+        transform: rotate(120deg);
+    }
+
+
+
+    70% {
+        transform: rotate(240deg);
+    }
+
+    80% {
+        transform: rotate(240deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes rotateImg {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(0deg);
+    }
+
+   
+
+    40% {
+        transform: rotate(-120deg);
+
+    }
+
+    50% {
+        transform: rotate(-120deg);
+    }
+
+
+
+    70% {
+        transform: rotate(-240deg);
+    }
+
+    80% {
+        transform: rotate(-240deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+ @keyframes desapireOne {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+
+    52% {
+        opacity: 1;
+    }
+
+    62% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes desapireTwo {
+    0% {
+        opacity: 1;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes desapireThree {
+    0% {
+        opacity: 0;
+    }
+   
+    55% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+} 
+
+.home-text{
+    margin-top: 60px;
+    width: 50%;
+}
+
+.home-text h1 {
+    font-size: 48px;
+    color: rgb(47, 46, 46);
+    width: 70%;
+}
+
+.home-text p {
+    font-size: 24px;
+    color: grey;
+    margin-top: 20px;
+    line-height: 1.8em;
+    font-weight: 520;
+}
+
+.home-btn{
+    padding: 20px 20px;
+    width: 150px;
+    background-color: #15adc2;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.home-btn:hover {
+    transform:scale(1.05);
+    background-color:#2bcadf;
+}
+
+@media (max-width: 768px) {
+    .home-main {
+        flex-direction: column;
+    }
+    .photo-main {
+        width: 100%;
+    }
+    .home-text {
+        margin: 10px;
+        width: 100%;
+    }
+}

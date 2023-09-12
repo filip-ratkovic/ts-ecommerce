@@ -12,7 +12,7 @@ function Cart() {
  <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}}>
      <Card className='w-50 h-100 d-flex justify-content-center'>
     <Card.Header className='d-flex justify-content-center' >
-        Card
+        Cart
     </Card.Header>
     <Card.Body>
         <Stack gap={3}>

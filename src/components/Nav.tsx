@@ -2,13 +2,14 @@ import React from "react";
 import { Container, Navbar as NavbarBs, Button } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useShoppingCard } from "../context/ShoppingCardContext";
+import "./nav.css"
 
 function Nav() {
   const navigate = useNavigate();
   const {cartQuantity} = useShoppingCard()
   return (
     <NavbarBs className="bg-white shadow-sm mb-3">
-      <Container>
+      <Container className="nav-links">
         <Link to={"/"}>Home</Link>
         <Link to={"/about"}>About</Link>
         <Link to={"/products"}>Products</Link>
