@@ -20,7 +20,7 @@ function CartItem({ id, quantity }: CartItemProps) {
 
   return (
     <Stack
-      className="me-auto d-flex flex-row align-items-center justify-content-between w-100 cart-cont"
+      className="me-auto d-flex align-items-center justify-content-between w-100 cart-cont"
       gap={2}
       style={{ borderBottom: "1px solid lightgrey", padding: "5px" }}
     >

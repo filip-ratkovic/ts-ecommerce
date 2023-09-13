@@ -1,3 +1,7 @@
+.cart-cont{
+        flex-direction: row !important;
+}
+
 @media (max-width:550px) {
     .cart-cont {
         flex-direction: column !important;

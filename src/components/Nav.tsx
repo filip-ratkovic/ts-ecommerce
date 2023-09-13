@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Navbar as NavbarBs, Button, Card } from "react-bootstrap";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useShoppingCard } from "../context/ShoppingCardContext";
 import "./nav.css"
 
